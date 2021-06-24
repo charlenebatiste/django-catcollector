@@ -1,4 +1,7 @@
 <!-- templates/cats/index.html -->
+<a href="/cats/create">Add a New Cat!</a>
+<hr />
+
 {% extends 'base.html' %}
 {% block content %}
     {% for cat in cats %}
@@ -9,5 +12,7 @@
             <p>Age: Kitten</p>
         {% endif %}
         <hr />
+        <!-- Add links for see more route... -->
+    <a href="{% url 'cats_show' cat.id %}">See Details</a> 
     {% endfor %}
 {% endblock %}
