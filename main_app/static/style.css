@@ -2,3 +2,16 @@ h1 {
     color: rgb(61, 163, 181);
     text-align: center;
 }
+
+.gallery{
+    margin: 1em;
+}
+.gallery__item{
+    border: 1px solid rgb(77, 77, 87);
+    background-color: rgb(202, 228, 237);
+    margin: .2em;
+}
+
+.footerWrapper{
+    background-color: lightblue;
+}

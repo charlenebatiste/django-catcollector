@@ -13,16 +13,15 @@
     <a href="/cats/create" class="waves-effect waves-light btn">Add a New Cat!</a>
 </div>
 
-
+<section class="gallery">
 
 <div class="row">
     {% for cat in cats %}
 
-    <div class="col s6 l3">
+    <div class="col s12 m10 l3 xl2 gallery__item">
         <p>Name: {{ cat.name }}</p>
-    <a href='/user/{{cat.user.username}}'>
-    <p>Adopted By: {{cat.user.username}}</p>
-    </a>
+    
+    <p>Adopted By: <a href='/user/{{cat.user.username}}'>{{cat.user.username}}</a></p>
     {% if cat.age > 0 %}
         <p>Age: {{ cat.age }}</p>
     {% else %}
@@ -33,5 +32,6 @@
     </div>
     {% endfor %}
 </div>
+</section>
     
 {% endblock %}
