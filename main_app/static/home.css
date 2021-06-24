@@ -1,0 +1,19 @@
+.indexWrapper{
+    height: 60vh;
+    background-image: url('./assets/hero-cat.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+}
+
+h1{
+    margin: 0;
+}
+
+.btn_container{
+text-align: center;
+}
+
+.footerWrapper{
+    background-color: lightblue;
+}

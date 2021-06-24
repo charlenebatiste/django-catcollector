@@ -17,7 +17,7 @@
     <div>Cat Has No Toys :(</div>
 {% endfor %}
     <!-- Add links for update and delete here... -->
-    <a href="{% url 'cats_update' cat.id %}">Update Details</a> | 
-    <a href="{% url 'cats_delete' cat.id %}">DELETE This Cat</a>
+    <a href="{% url 'cats_update' cat.id %}" class="waves-effect waves-light btn">Update Details</a>
+    <a href="{% url 'cats_delete' cat.id %}" class="waves-effect waves-light btn">DELETE This Cat</a>
 </div>
 {% endblock %}

@@ -5,19 +5,33 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <a href="/cats/create">Add a New Cat!</a>
-    <hr />
+<div class="heading">
+    <h1>Gallery</h1>
+</div>
+<hr />
+<div class="btn_container">
+    <a href="/cats/create" class="waves-effect waves-light btn">Add a New Cat!</a>
+</div>
+
+
+
+<div class="row">
     {% for cat in cats %}
+
+    <div class="col s6 l3">
         <p>Name: {{ cat.name }}</p>
-      <a href='/user/{{cat.user.username}}'>
-        <p>Adopted By: {{cat.user.username}}</p>
-      </a>
-        {% if cat.age > 0 %}
-          <p>Age: {{ cat.age }}</p>
-        {% else %}
-          <p>Age: Kitten</p>
-        {% endif %}
-        <a href="{% url 'cats_show' cat.id %}">See Details</a> 
-        <hr />
-        {% endfor %}
+    <a href='/user/{{cat.user.username}}'>
+    <p>Adopted By: {{cat.user.username}}</p>
+    </a>
+    {% if cat.age > 0 %}
+        <p>Age: {{ cat.age }}</p>
+    {% else %}
+        <p>Age: Kitten</p>
+    {% endif %}
+    <a href="{% url 'cats_show' cat.id %}">See Details</a> 
+
+    </div>
+    {% endfor %}
+</div>
+    
 {% endblock %}

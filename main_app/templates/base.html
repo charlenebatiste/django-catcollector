@@ -1,22 +1,36 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-  <head>
+    <head>
     <title>CatCollector</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
-  </head>
-  <body>
-     <a href="/cats">
-         <h1>catcollector</h1>
-     </a>
-    <hr />
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+            <a href="/cats" class="brand-logo">CatCollector</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'profile' user.username %}">Hello, {{ user.username }}!</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">SignUp</a></li>
+                {% endif %}
+            </ul>
+            </div>
+        </nav>
 
         {% block content %}
         {% endblock %}
 
-      <footer>
-        All Rights Reserved, catcollector 2021
-      </footer>
-  </body>
+        <footer>
+            <div class="footer-copyright">
+                <div class="container">
+                    All Rights Reserved, catcollector 2018
+                </div>
+            </div>
+		</footer>
+    </body>
 </html>

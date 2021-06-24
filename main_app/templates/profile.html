@@ -5,11 +5,27 @@
 
 <h1>{{ username }}'s collection:</h1>
 
-{% for cat in cats %}
-<a href="/cats/{{ cat.id }}">
-  <h3>{{ cat.name }}</h3>
-</a>
+<table>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Description</th>
+    </tr>
+</thead>
 
+{% for cat in cats %}
+
+<tbody>
+    <tr>
+    <td>{{ cat.name }}</td>
+    <td>{{ cat.age }}</td>
+    <td><a href="/cats/{{ cat.id }}">See cat profile</a></td>
+    </tr>
+</tbody>
 {% endfor %}
+</table>
+
+
 
 {% endblock %}

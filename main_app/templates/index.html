@@ -3,15 +3,25 @@
 <html>
 	<head>
 		<title>catcollector</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
 	</head>
 	<body>
-		<h1>catcollector</h1>
-		<hr />
-		<a href="/cats">View All My Cats!</a>
-		<footer>
-			All Rights Reserved, catcollector 2018
+        <div class="indexWrapper">
+            <div class="row">
+                <div class="col s6">
+                    <h1>Welcome to Catcollector</h1>
+                    <p>A den to collect cats to your hearts desire</p>
+                    <div class="btn_container">
+                        <a href="/cats" class="waves-effect waves-light btn">Enter site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<footer class="footerWrapper">
+                <div class="container">
+                    <div>All Rights Reserved, catcollector 2021</div>
+                </div>
 		</footer>
 	</body>
 </html>
